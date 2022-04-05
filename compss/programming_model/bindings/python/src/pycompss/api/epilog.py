@@ -20,7 +20,7 @@
 """
 PyCOMPSs API - Epilog
 ==================
-todo: write a proper description
+    Epilog definition for PyCOMPSs tasks.
 """
 
 from functools import wraps
@@ -48,7 +48,9 @@ DEPRECATED_ARGUMENTS = set()
 
 class Epilog(PyCOMPSsDecorator):
     """
-    todo: write comments
+    Epilog decorator of the task. If defined, will execute the binary after the
+    task execution on the worker. Should always be added on top of the 'task'
+    definition.
     """
 
     __slots__ = []
@@ -80,7 +82,7 @@ class Epilog(PyCOMPSsDecorator):
     def __call__(self, user_function):
         # type: (typing.Callable) -> typing.Callable
         """
-        todo: write
+        Calling Epilog simply updates the CE and saves Epilog parameters.
         :param user_function: User function to be decorated.
         :return: Decorated dummy user function.
         """

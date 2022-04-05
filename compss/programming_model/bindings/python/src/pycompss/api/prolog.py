@@ -20,7 +20,7 @@
 """
 PyCOMPSs API - Prolog
 ==================
-todo: write a proper description
+    Prolog definition for PyCOMPSs tasks.
 """
 
 from functools import wraps
@@ -48,7 +48,9 @@ DEPRECATED_ARGUMENTS = set()
 
 class Prolog(PyCOMPSsDecorator):
     """
-    todo: write comments
+    Prolog decorator of the task. If defined, will execute the binary before the
+    task execution on the worker. Should always be added on top of the 'task'
+    definition.
     """
 
     __slots__ = []
@@ -80,7 +82,7 @@ class Prolog(PyCOMPSsDecorator):
     def __call__(self, user_function):
         # type: (typing.Callable) -> typing.Callable
         """
-        todo: write
+        Calling Prolog simply updates the CE and saves Prolog parameters.
         :param user_function: User function to be decorated.
         :return: Decorated dummy user function.
         """
