@@ -1853,10 +1853,12 @@ set_variables() {
       export SINGULARITYENV_COMPSS_HOME=/opt/COMPSs/
       export SINGULARITYENV_GAT_LOCATION=/opt/COMPSs/Dependencies/JAVA_GAT
       worker_install_dir=/opt/COMPSs
+      cont_COMPSS_HOME=/opt/COMPSs/
     else
       export SINGULARITYENV_COMPSS_HOME=${container_compss_path}/
       export SINGULARITYENV_GAT_LOCATION=${container_compss_path}/Dependencies/JAVA_GAT
       worker_install_dir=${container_compss_path}/
+      cont_COMPSS_HOME=${container_compss_path}/
     fi
   fi
 
