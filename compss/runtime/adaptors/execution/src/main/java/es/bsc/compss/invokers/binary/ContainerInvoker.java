@@ -348,7 +348,8 @@ public class ContainerInvoker extends Invoker {
                             cmd[cmdIndex++] = pycompssVol + ":" + pycompssMount;
                         } else {
                             cmd[cmdIndex++] =
-                                pyCompssDir + File.separator + "pycompss" + File.separator + ":" + pyCompssDir;
+                                pyCompssDir + File.separator + "pycompss" + File.separator + ":" + pyCompssDir
+				+ pyCompssDir + File.separator + "pycompss" + File.separator;
                         }
 
                         // cmd[cmdIndex++] = "--mount";
