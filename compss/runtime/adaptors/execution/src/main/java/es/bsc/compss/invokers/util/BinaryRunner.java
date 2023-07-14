@@ -534,7 +534,8 @@ public class BinaryRunner {
         int maxNumProcsPerNode = hostnames2numThreads.entrySet().stream()
             .max((entry1, entry2) -> entry1.getValue() > entry2.getValue() ? 1 : -1).get().getValue();
 
-        maxNumProcsPerNode *= theoreticalNumProcs;
+        // todo: nm: make sure mpmd doesn't fail
+        maxNumProcsPerNode *= theoreticalNumProcs / theoreticalNumProcs;
         // Re-set COMPSs properties
         // We do not reset COMPSs properties because it does not have to match SLURM
         // System.setProperty(Invoker.COMPSS_NUM_NODES, String.valueOf(uniqueNumNodes));
